@@ -1,7 +1,4 @@
-<h1>Angular Router App</h1>
-<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
 <nav>
-  
      <div *ngIf="isLoggedin === true">
                             <div class="form-group">
                               <label>First Name</label>
@@ -22,7 +19,4 @@
                           
                             <button type="button" (click)="signOut()" class="btn btn-primary">Sign Out</button>
                           </div> 
-  
 </nav>
-<!-- The routed views render in the <router-outlet>-->
-<router-outlet></router-outlet>

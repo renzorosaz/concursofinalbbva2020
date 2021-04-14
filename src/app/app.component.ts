@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
     this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID)
     .then(
       data => {
-        //console.log(data["email"]);
+        console.log(data["email"]);
         //this.registerSocialNetUser(data.response)
         //this.registerSocialNetUser(data['firstName'], data['lastName'], data['email'], '1234', 'facebook', data['photoUrl']);
         //this.router.navigate(['items'], { relativeTo: this.route });
