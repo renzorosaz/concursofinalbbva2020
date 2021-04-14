@@ -8,7 +8,4 @@ import {Component,OnInit} from '@angular/core';
 export class RegisterUserComponent implements OnInit {
     constructor(){}
 
-    ngOnInit(){
-        
-    }
-}
+    ngOnInit(){}}
