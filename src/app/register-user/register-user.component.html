@@ -1,0 +1,90 @@
+<div class="login-page">
+  <mat-card class="mat-elevation-z12">
+    <mat-card-title style="text-align:center;">Inicar Sesión / Registrarse</mat-card-title>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+      <mat-tab label="Iniciar Sesión">
+        <mat-card-content>
+          <form action="">
+            <mat-form-field>
+              <input matInput placeholder="Email" required name="email" ngModel #email="ngModel">
+              <mat-error *ngIf="email.invalid">Email es requerido</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Contraseña" type="password" required minlength="6" name="password" ngModel
+                #password="ngModel">
+              <mat-error *ngIf="password.errors && password.errors.required">
+                Contraseña es requerida
+              </mat-error>
+              <mat-error *ngIf="password.errors && password.errors.minlength">
+                La contraseña debe tener mínimo 6 carácteres
+              </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+            <mat-checkbox>Recuerdame!</mat-checkbox>
+            <button mat-raised-button color="primary" class="login-button">
+              Ingresar
+            </button>
+
+            <button mat-raised-button class="login-button">
+              <mat-icon>google</mat-icon>
+              Ingresa con Google
+            </button>
+
+            <button mat-raised-button class="login-button">
+              <mat-icon>facebook</mat-icon>
+              Ingresa con Facebbok
+            </button>
+
+           
+          </form>
+        </mat-card-content>
+        <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
+          data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+      </mat-tab>
+      <mat-tab label="Registrarse">
+        <mat-card-content>
+          <form action="">
+            <mat-form-field>
+              <input matInput placeholder="Nombre de usuario" required name="username" ngModel #username="ngModel">
+              <mat-icon matSuffix>perm_identity</mat-icon>
+              <mat-error *ngIf="username.invalid">
+                Nombre de usuario requerido
+              </mat-error>
+
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Email" required name="email" ngModel #email="ngModel">
+              <mat-error *ngIf="email.invalid">Email es requerido</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Contraseña" type="password" required minlength="6" name="password" ngModel
+                #password="ngModel">
+              <mat-error *ngIf="password.errors && password.errors.required">
+                Contraseña es requerida
+              </mat-error>
+              <mat-error *ngIf="password.errors && password.errors.minlength">
+                La contraseña debe tener mínimo 6 carácteres
+              </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Contraseña" type="password" required minlength="6" name="repassword" ngModel
+                #repassword="ngModel">
+              <mat-error *ngIf="repassword.errors && repassword.errors.required">
+                Re-ingresa la contraseña requerida
+
+              </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+            <button mat-raised-button color="primary" class="login-button">
+              Registrarme
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>
