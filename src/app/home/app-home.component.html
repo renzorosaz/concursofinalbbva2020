@@ -1,4 +1,28 @@
-<!-- <app-header title="Momentz-4-ever"
-            [isUserLoggedIn]="true" ></app-header> -->
-
-    Welcome, you are now logged in!!!
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  
+     <div *ngIf="isLoggedin === true">
+                            <div class="form-group">
+                              <label>First Name</label>
+                              <input type="text" class="form-control" [value]="socialUser.firstName" id="firstname" readonly>
+                            </div>
+                            <div class="form-group">
+                              <label>Last Name</label>
+                              <input type="text" class="form-control" [value]="socialUser.lastName" id="lastname" readonly>
+                            </div>
+                            <div class="form-group">
+                              <label>Email</label>
+                              <input type="text" class="form-control" [value]="socialUser.email" id="email" readonly>
+                            </div>
+                            <div class="form-group">
+                              <label>ID</label>
+                              <input type="text" class="form-control" [value]="socialUser.id" id="email" readonly>
+                            </div>
+                          
+                            <button type="button" (click)="signOut()" class="btn btn-primary">Sign Out</button>
+                          </div> 
+  
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>

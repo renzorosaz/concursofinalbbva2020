@@ -41,6 +41,7 @@
                           <li>
                              <!-- <div *ngIf="!isLoggedin"> -->
                             <button type="button" (click)="loginWithFacebook()" class="btn btn-primary btn-block">Ingresa con Facebook</button>
+                            
                            <!-- </div> -->
 
                            <!-- <div *ngIf="isLoggedin === true">
@@ -90,7 +91,7 @@
       </div>
   </div>
 </section> 
-
+<router-outlet></router-outlet>
 
 <!-- <script>
   window.fbAsyncInit = function() {
