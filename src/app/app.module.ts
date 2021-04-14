@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { Route,RouterModule } from '@angular/router';
+import { Routes,RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
@@ -23,16 +23,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FacebookLoginProvider, SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import { LoginComponent } from './login/login.component';
 
+import {AppRoutingModule, RoutingComponents} from './app-routing.module';
 
 
 @NgModule({
   
   declarations: [
     RegisterUserComponent,
+    RoutingComponents,
     AppComponent,
     
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     RouterModule,
     ReactiveFormsModule,
